@@ -12,6 +12,7 @@ class Actor < ActiveRecord::Base
     characters.collect do |m|
       roles<<"#{m.name} - #{m.show.name}"
     end
+    roles
   end
 
 end
