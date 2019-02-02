@@ -11,6 +11,7 @@ class Actor < ActiveRecord::Base
     roles=[]
     characters.collect do |m|
       roles<<m.name, m.show.name
+    end
   end
 
 end
