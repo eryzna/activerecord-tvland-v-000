@@ -9,10 +9,9 @@ class Actor < ActiveRecord::Base
 
   def list_roles
     roles=[]
-    characters.collect do |m|
-      roles<<"#{m.name} - #{m.show.name}"
+    characters.map do |m|
+      "#{m.name} - #{m.show.name}"
     end
-    roles
   end
 
 end
